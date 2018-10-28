@@ -6,14 +6,12 @@ import { RecipesPage } from "../recipes/recipes";
   selector: 'page-tabs',
   template: `
     <ion-tabs [selectedIndex]="0">
-      <ion-tab [root]="shoppingListPage" tabTitle="Shopping List" tabIcon="list"></ion-tab>
+      <ion-tab [root]="shoppingListPage" tabTitle="Shopping List" tabIcon="list-box"></ion-tab>
       <ion-tab [root]="recipesPage" tabTitle="Recipes" tabIcon="book"></ion-tab>
     </ion-tabs>
   `
 })
 export class TabsPage {
-
-      shoppingListPage = ShoppingListPage;
-      recipesPage = RecipesPage;
-
+  shoppingListPage = ShoppingListPage;
+  recipesPage = RecipesPage;
 }
