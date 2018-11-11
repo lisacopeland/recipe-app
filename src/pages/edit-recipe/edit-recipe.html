@@ -28,6 +28,18 @@
 
     </ion-list>
     <button
+      (click)="OnManageIngredients()"
+      type="button"
+      clear
+      ion-button
+      block>Manage Ingedients</button>
+    <ion-list formArrayName="ingredients">
+      <ion-item *ngFor="let igControl of recipeForm.get('ingredients').controls; let i = index">
+        <ion-label>Name</ion-label>
+        <ion-input type="text" [formControlName]="i"></ion-input>
+      </ion-item>
+    </ion-list>
+    <button
       [disabled]="!recipeForm.valid"
       type="submit"
       ion-button
